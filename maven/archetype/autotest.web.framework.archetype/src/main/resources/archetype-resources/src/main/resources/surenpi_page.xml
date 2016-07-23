@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autotest xmlns="http://surenpi.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://surenpi.com http://surenpi.com ">
+  <engine driver="chrome"/>
+  <pages>
+    <page class="${package}.page.SuRenPiHomePage"
+    	url="http://surenpi.com">
+      <field name="searchText" byXpath="//*[@id='search-3']/form/label/input" data="selenium" type="input"/>
+    </page>
+  </pages>
+</autotest>
