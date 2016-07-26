@@ -5,6 +5,7 @@ package ${package}.page;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.suren.autotest.web.framework.core.ui.Button;
 import org.suren.autotest.web.framework.core.ui.Text;
 import org.suren.autotest.web.framework.page.Page;
 
@@ -20,6 +21,8 @@ public class SuRenPiHomePage extends Page
 	/** 首页的搜索文本框 */
 	@Autowired
 	private Text searchText;
+	@Autowired
+	private Button closeBut;
 
 	public Text getSearchText()
 	{
@@ -29,5 +32,13 @@ public class SuRenPiHomePage extends Page
 	public void setSearchText(Text searchText)
 	{
 		this.searchText = searchText;
+	}
+
+	public Button getCloseBut() {
+		return closeBut;
+	}
+
+	public void setCloseBut(Button closeBut) {
+		this.closeBut = closeBut;
 	}
 }
