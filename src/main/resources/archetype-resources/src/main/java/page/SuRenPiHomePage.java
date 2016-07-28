@@ -6,6 +6,7 @@ package ${package}.page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.suren.autotest.web.framework.core.ui.Button;
+import org.suren.autotest.web.framework.core.ui.CheckBoxGroup;
 import org.suren.autotest.web.framework.core.ui.Text;
 import org.suren.autotest.web.framework.page.Page;
 
@@ -23,6 +24,12 @@ public class SuRenPiHomePage extends Page
 	private Text searchText;
 	@Autowired
 	private Button closeBut;
+	@Autowired
+	private CheckBoxGroup checkBoxGroup;
+	@Autowired
+	private Text chargeText;
+	@Autowired
+	private Button chargeBut;
 
 	public Text getSearchText()
 	{
@@ -40,5 +47,29 @@ public class SuRenPiHomePage extends Page
 
 	public void setCloseBut(Button closeBut) {
 		this.closeBut = closeBut;
+	}
+
+	public CheckBoxGroup getCheckBoxGroup() {
+		return checkBoxGroup;
+	}
+
+	public void setCheckBoxGroup(CheckBoxGroup checkBoxGroup) {
+		this.checkBoxGroup = checkBoxGroup;
+	}
+
+	public Button getChargeBut() {
+		return chargeBut;
+	}
+
+	public void setChargeBut(Button chargeBut) {
+		this.chargeBut = chargeBut;
+	}
+
+	public Text getChargeText() {
+		return chargeText;
+	}
+
+	public void setChargeText(Text chargeText) {
+		this.chargeText = chargeText;
 	}
 }
