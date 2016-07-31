@@ -19,7 +19,7 @@ public class Test
 	 */
 	public static void main(String[] args) throws Exception
 	{
-		SettingUtil util = new SettingUtil("org.suren.auotest.autotest.web.framework.test.page"); //这里的参数是Page类所在的包（package
+		SettingUtil util = new SettingUtil("${package}.page"); //这里的参数是Page类所在的包（package
 		try
 		{
 			util.readFromClassPath("surenpi_page.xml"); //从resources目录下读取配置文件

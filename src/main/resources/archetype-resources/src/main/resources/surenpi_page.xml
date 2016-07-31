@@ -17,10 +17,10 @@
 					<locator name="byId" value="brix_brick_27"/>
 				</locators>
 			</field>
-			<field name="chargeText" type="input" strategy="zone" data="18211191651">
+			<field name="chargeText" type="input" strategy="zone" data="18111181651">
 				<locators>
 					<locator name="byIFrameIndex" value="1"/> <!-- 根据当前页面中iframe的序号定位，从0开始 -->
-					<locator name="byId" value="J_tel_num"/>
+					<locator name="byId" value="J_tel_num" timeout="10"/>
 				</locators>
 			</field>
 			<field name="chargeBut" type="button" strategy="zone">
