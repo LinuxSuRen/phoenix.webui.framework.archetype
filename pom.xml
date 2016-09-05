@@ -1,17 +1,32 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  
-  <parent>
-  	<groupId>org.suren</groupId>
-  	<artifactId>org.suren.parent</artifactId>
-  	<version>0.0.1-SNAPSHOT</version>
-  </parent>
-  
-  <groupId>org.suren.archetype</groupId>
-  <artifactId>autotest.web.framework.archetype</artifactId>
-  
-  <name>Archetype - autotest.web.framework.archetype</name>
-  <url>http://surenpi.com</url>
-  <version>0.0.2-SNAPSHOT</version>
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.suren</groupId>
+		<artifactId>org.suren.parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<groupId>org.suren.archetype</groupId>
+	<artifactId>autotest.web.framework.archetype</artifactId>
+
+	<name>Archetype - autotest.web.framework.archetype</name>
+	<url>http://surenpi.com</url>
+	<version>0.0.2-SNAPSHOT</version>
+
+	<repositories>
+		<repository>
+			<id>maven.surenpi.com</id>
+			<name>SuRen Maven Repositories</name>
+			<url>http://maven.surenpi.com/nexus/content/repositories/public/</url>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+		</repository>
+	</repositories>
 </project>
