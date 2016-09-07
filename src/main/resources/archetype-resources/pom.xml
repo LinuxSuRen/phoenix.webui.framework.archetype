@@ -7,6 +7,21 @@
 	
 	<url>http://surenpi.com</url>
 	<name>${artifactId}</name>
+
+	<repositories>
+		<repository>
+			<id>maven.surenpi.com</id>
+			<name>SuRen Maven Repositories</name>
+			<url>http://maven.surenpi.com/nexus/content/repositories/public/</url>
+			<snapshots>
+				<enabled>true</enabled>
+        		<updatePolicy>always</updatePolicy>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+		</repository>
+	</repositories>
 	
 	<dependencies>
 		<dependency>
