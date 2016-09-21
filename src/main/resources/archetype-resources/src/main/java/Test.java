@@ -7,7 +7,7 @@ import ${package}.page.SuRenPiHomePage;
 import org.suren.autotest.web.framework.settings.SettingUtil;
 
 /**
- * 测试示例
+ * 测试示例，该测试代码和runner_suite.xml的效果是一样的
  * @author suren
  * @date Jul 23, 2016 4:48:39 PM
  */
@@ -33,7 +33,7 @@ public class Test
 			
 			homePage.getChargeText().fillValue(); //填入淘宝手机充值号码
 			
-			homePage.getCheckBoxGroup().selectByText("50"); //设置要充值的金额
+			homePage.getCheckBoxGroup().selectByText(); //设置要充值的金额
 			
 			homePage.getChargeBut().click(); //点击充值确认按钮
 			
