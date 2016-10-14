@@ -30,6 +30,10 @@ public class SuRenPiHomePage extends Page
 	private Text chargeText;
 	@Autowired
 	private Button chargeBut;
+	@Autowired
+	private Button devBut;
+	@Autowired
+	private Button javaBut;
 
 	public Text getSearchText()
 	{
@@ -71,5 +75,21 @@ public class SuRenPiHomePage extends Page
 
 	public void setChargeText(Text chargeText) {
 		this.chargeText = chargeText;
+	}
+
+	public Button getDevBut() {
+		return devBut;
+	}
+
+	public void setDevBut(Button devBut) {
+		this.devBut = devBut;
+	}
+
+	public Button getJavaBut() {
+		return javaBut;
+	}
+
+	public void setJavaBut(Button javaBut) {
+		this.javaBut = javaBut;
 	}
 }
