@@ -29,6 +29,18 @@
 					<locator name="byId" value="J_submit"/>
 				</locators>
 			</field>
+			<field name="devBut" type="button" strategy="zone">
+				<locators>
+					<locator name="byId" value="primary-navigation"/>
+					<locator name="byPartialLinkText" value="开发"/>
+				</locators>
+			</field>
+			<field name="javaBut" type="button" strategy="zone">
+				<locators>
+					<locator name="byId" value="primary-navigation"/>
+					<locator name="byPartialLinkText" value="Java"/>
+				</locators>
+			</field>
 		</page>
 	</pages>
 </autotest>

@@ -27,6 +27,8 @@ public class Test
 			
 			SuRenPiHomePage homePage = util.getPage(SuRenPiHomePage.class);
 			homePage.open(); //打开浏览器地址
+			homePage.getDevBut().hover(); //鼠标悬停
+			homePage.getJavaBut().click();
 			homePage.getSearchText().fillValue().performEnter(); //输入搜索关键字并按回车确认
 
 			homePage.getCloseBut().click(); //关闭右下角公告
