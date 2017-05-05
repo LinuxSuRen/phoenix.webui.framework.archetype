@@ -7,27 +7,26 @@
 	
 	<url>http://surenpi.com</url>
 	<name>${artifactId}</name>
-
-	<repositories>
-		<repository>
-			<id>maven.surenpi.com</id>
-			<name>SuRen Maven Repositories</name>
-			<url>http://maven.surenpi.com/nexus/content/repositories/public/</url>
-			<snapshots>
-				<enabled>true</enabled>
-        		<updatePolicy>always</updatePolicy>
-			</snapshots>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-		</repository>
-	</repositories>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.6.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 	
 	<dependencies>
 		<dependency>
-			<groupId>org.suren.autotest</groupId>
+			<groupId>com.surenpi.autotest</groupId>
 			<artifactId>autotest.web.framework</artifactId>
-			<version>0.0.2-SNAPSHOT</version>
+			<version>1.0.2-20170422</version>
 		</dependency>
 	</dependencies>
 </project>
