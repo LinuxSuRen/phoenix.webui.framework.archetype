@@ -3,17 +3,23 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>org.suren</groupId>
-		<artifactId>org.suren.parent</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<groupId>com.surenpi.autotest</groupId>
+		<artifactId>autotest.parent</artifactId>
+		<version>1.0.0-20170504</version>
 	</parent>
 
-	<groupId>org.suren.archetype</groupId>
 	<artifactId>autotest.web.framework.archetype</artifactId>
+	<version>1.0.2-20170422</version>
 
 	<name>Archetype - autotest.web.framework.archetype</name>
 	<url>http://surenpi.com</url>
-	<version>0.0.2-SNAPSHOT</version>
+	<description>WebUI自动化测试框架骨架</description>
+	
+	<scm>
+		<connection>https://github.com/LinuxSuRen/phoenix.webui.framework.git</connection>
+		<url>https://github.com/LinuxSuRen/phoenix.webui.framework</url>
+		<developerConnection>https://github.com/LinuxSuRen/phoenix.webui.framework.git</developerConnection>
+	</scm>
 
 	<repositories>
 		<repository>
