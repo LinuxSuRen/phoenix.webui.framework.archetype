@@ -9,7 +9,7 @@
 	</parent>
 
 	<artifactId>autotest.web.framework.archetype</artifactId>
-	<version>1.0.2-20170422</version>
+	<version>1.0.2-20170610</version>
 
 	<name>Archetype - autotest.web.framework.archetype</name>
 	<url>http://surenpi.com</url>
