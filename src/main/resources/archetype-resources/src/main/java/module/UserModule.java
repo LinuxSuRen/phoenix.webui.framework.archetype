@@ -1,6 +1,7 @@
 package ${package}.module;
 
 import ${package}.util.KeyboardUtils;
+import ${package}.page.HomePage;
 import org.suren.autotest.web.framework.annotation.AutoModule;
 import org.suren.autotest.web.framework.core.EngineAware;
 import org.suren.autotest.web.framework.settings.SettingUtil;
@@ -15,11 +16,11 @@ import java.awt.*;
 public class UserModule implements EngineAware
 {
     private SettingUtil util;
-    private ${package}.page.HomePage page;
+    private HomePage page;
 
     public void login()
     {
-        page = util.getPage(com.surenpi.autotest.demo.page.HomePage.class);
+        page = util.getPage(HomePage.class);
         page.open();
         page.getUserName().fillNotBlankValue();
         page.getPassword().fillNotBlankValue();
