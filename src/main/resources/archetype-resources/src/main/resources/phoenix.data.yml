@@ -1,0 +1,3 @@
+${package}.page.HomePage:
+  userName: demo
+  password: demo
