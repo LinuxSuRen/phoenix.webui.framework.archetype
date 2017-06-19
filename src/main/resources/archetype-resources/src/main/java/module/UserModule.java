@@ -15,7 +15,7 @@ import java.awt.*;
 public class UserModule implements EngineAware
 {
     private SettingUtil util;
-    private com.surenpi.autotest.demo.page.HomePage page;
+    private ${package}.page.HomePage page;
 
     public void login()
     {
