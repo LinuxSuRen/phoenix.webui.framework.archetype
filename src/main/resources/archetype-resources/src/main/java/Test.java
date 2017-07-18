@@ -24,9 +24,7 @@ package ${package};
 import ${package}.module.ProjectModule;
 import ${package}.module.UserModule;
 import org.suren.autotest.web.framework.annotation.AutoApplication;
-import org.suren.autotest.web.framework.selenium.SeleniumEngine;
-import org.suren.autotest.web.framework.settings.DriverConstants;
-import org.suren.autotest.web.framework.settings.SettingUtil;
+import org.suren.autotest.web.framework.settings.Phoenix;
 import org.suren.autotest.web.framework.util.ThreadUtil;
 
 /**
@@ -46,23 +44,20 @@ public class Test
 	 */
 	public static void main(String[] args) throws Exception
 	{
-		SettingUtil util = new SettingUtil(Test.class);
-		SeleniumEngine engine = util.getEngine();
-		engine.setDriverStr(DriverConstants.DRIVER_HTML_UNIT);
-		engine.init();
-		util.initData();
+		Phoenix phoenix = new Phoenix(Test.class);
+		phoenix.initWithData();
 
-		UserModule userModule = util.getModule(UserModule.class);
+		UserModule userModule = phoenix.getModule(UserModule.class);
 		userModule.login();
 		userModule.toProjectList();
 
 		ThreadUtil.silentSleep(6000);
-		ProjectModule projectModule = util.getModule(ProjectModule.class);
+		ProjectModule projectModule = phoenix.getModule(ProjectModule.class);
 		projectModule.addProject();
 		projectModule.listProject();
 
-		util.close();
-		util.shutdown();
+		phoenix.close();
+		phoenix.shutdown();
 	}
 
 }

@@ -9,7 +9,7 @@ import org.suren.autotest.web.framework.annotation.AutoModule;
 @AutoModule(name = "项目管理模块")
 public class ProjectModule
 {
-    @AutoExpect(accept = NullPointerException.class)
+    @AutoExpect(accept = NullPointerException.class, expect = NullPointerException.class)
     public void addProject()
     {
         String str = null ;

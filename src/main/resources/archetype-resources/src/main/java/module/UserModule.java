@@ -3,9 +3,10 @@ package ${package}.module;
 import ${package}.util.KeyboardUtils;
 import ${package}.page.HomePage;
 import org.suren.autotest.web.framework.annotation.AutoModule;
-import org.suren.autotest.web.framework.core.EngineAware;
-import org.suren.autotest.web.framework.settings.SettingUtil;
 import org.suren.autotest.web.framework.util.ThreadUtil;
+
+import com.surenpi.autotest.webui.core.EngineAware;
+import com.surenpi.autotest.webui.core.WebUIEngine;
 
 import java.awt.*;
 
@@ -15,7 +16,7 @@ import java.awt.*;
 @AutoModule(name = "用户模块")
 public class UserModule implements EngineAware
 {
-    private SettingUtil util;
+    private WebUIEngine util;
     private HomePage page;
 
     public void login()
@@ -37,7 +38,7 @@ public class UserModule implements EngineAware
     }
 
     @Override
-    public void setEngine(SettingUtil util)
+    public void setEngine(WebUIEngine util)
     {
         this.util = util;
     }
