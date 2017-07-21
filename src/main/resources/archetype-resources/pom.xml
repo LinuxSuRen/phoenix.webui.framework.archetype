@@ -25,50 +25,67 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jar-plugin</artifactId>
-				<version>2.4</version>
-				<configuration>
-					<archive>
-						<manifest>
-							<addClasspath>true</addClasspath>
-							<classpathPrefix>lib</classpathPrefix>
-							<mainClass>${package}.Test</mainClass>
-						</manifest>
-					</archive>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-dependency-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>copy</id>
-						<phase>package</phase>
-						<goals>
-							<goal>copy-dependencies</goal>
-						</goals>
-						<configuration>
-							<outputDirectory>${project.build.directory}/lib</outputDirectory>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>appassembler-maven-plugin</artifactId>
+                <version>1.2.1</version>
+                <executions>
+                    <execution>
+                        <phase>
+                            install
+                        </phase>
+                        <goals>
+                            <goal>assemble</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <configurationDirectory>conf</configurationDirectory>
+                    <configurationSourceDirectory>src/main/resources</configurationSourceDirectory>
+                    <copyConfigurationDirectory>true</copyConfigurationDirectory>
+                    <includeConfigurationDirectoryInClasspath>true</includeConfigurationDirectoryInClasspath>
+                    <assembleDirectory>${project.build.directory}/phoenix</assembleDirectory>
+                    <binFileExtensions>
+                        <unix>.sh</unix>
+                    </binFileExtensions>
+                    <platforms>
+                        <platform>windows</platform>
+                        <platform>unix</platform>
+                    </platforms>
+                    <repositoryName>lib</repositoryName>
+                    <repositoryLayout>flat</repositoryLayout>
+                    <encoding>UTF-8</encoding>
+                    <binFolder>bin</binFolder>
+                    <logsDirectory>logs</logsDirectory>
+                    <tempDirectory>tmp</tempDirectory>
+                    <programs>
+                        <program>
+                            <mainClass>${package}.Test</mainClass>
+                            <name>phoenix</name>
+                        </program>
+                    </programs>
+                </configuration>
+            </plugin>
 		</plugins>
 	</build>
 	
 	<dependencies>
-		<dependency>
-			<groupId>com.surenpi.autotest</groupId>
-			<artifactId>autotest.web.framework</artifactId>
-			<version>2.0.0-20170706</version>
-		</dependency>
+        <dependency>
+            <groupId>com.surenpi.autotest</groupId>
+            <artifactId>autotest.web.framework</artifactId>
+            <version>2.0.0-20170706</version>
+        </dependency>
 
-		<dependency>
-			<groupId>com.surenpi.autotest</groupId>
-			<artifactId>autotest.report.excel</artifactId>
-			<version>1.0.0-20170618</version>
-		</dependency>
+        <dependency>
+            <groupId>com.surenpi.autotest</groupId>
+            <artifactId>autotest.report.excel</artifactId>
+            <version>1.0.0-20170618</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.surenpi.autotest</groupId>
+            <artifactId>autotest.datasource.yaml</artifactId>
+            <version>1.0.0-20170706</version>
+        </dependency>
 	</dependencies>
 </project>
