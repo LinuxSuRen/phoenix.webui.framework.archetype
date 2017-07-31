@@ -36,3 +36,20 @@ node {
     }
   }
 }
+
+properties([
+    [
+        $class: 'GithubProjectProperty',
+        displayName: 'phoenix.webui.framework.archetype',
+        projectUrlStr: 'https://github.com/LinuxSuRen/phoenix.webui.framework.archetype'
+    ],
+    buildDiscarder(
+        logRotator(
+            artifactDaysToKeepStr: '',
+            artifactNumToKeepStr: '',
+            daysToKeepStr: '7',
+            numToKeepStr: '14'
+        )
+    ),
+    pipelineTriggers([])
+])
