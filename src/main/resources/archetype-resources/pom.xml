@@ -60,7 +60,7 @@
                     <tempDirectory>tmp</tempDirectory>
                     <programs>
                         <program>
-                            <mainClass>${package}.Test</mainClass>
+                            <mainClass>${package}.github.GithubTest</mainClass>
                             <name>phoenix</name>
                         </program>
                     </programs>
